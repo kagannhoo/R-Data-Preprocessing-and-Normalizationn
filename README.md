@@ -1,10 +1,10 @@
-# 📊 Introduction to Data: My Data Science and Analytics Journey
+# Introduction to Data: My Data Science and Analytics Journey
 
 Hello! This repository is my main archive containing the projects, university assignments, and study notes I have developed in the fields of **Data Science, Data Mining, and Data Analytics** during my Management Information Systems (MIS) education.
 
 My core philosophy during development is to learn by coding the underlying statistical mathematics of machine learning and data preprocessing algorithms from scratch, rather than memorizing ready-made (black-box) libraries. I conduct all my work in the **Pardus Linux** open-source development environment.
 
-## 📁 Projects and Assignments Catalog
+## Projects and Assignments Catalog
 
 The works in this repository are listed chronologically below. Each project contains detailed explanations (`README.md`) and source codes within its respective folder:
 
@@ -13,7 +13,7 @@ The works in this repository are listed chronologically below. Each project cont
 *   **[02 - Coming Soon...]**
     * *Description:* Future assignments and projects will be added here.
 
-## 🛠️ Tools and Technologies Used
+## Tools and Technologies Used
 * **Languages:** R, Python, SQL
 * **Development & Database:** RStudio, VS Code, PostgreSQL, DBeaver
 * **Operating System:** Pardus Linux
