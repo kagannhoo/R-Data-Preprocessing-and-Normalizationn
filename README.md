@@ -1,38 +1,22 @@
-# Advanced Data Preprocessing and Statistical Normalization in R
+# 📊 Introduction to Data: My Data Science and Analytics Journey
 
-This project demonstrates how raw and inconsistent sensor data (BALTEX dataset) is cleaned and statistically scaled before being integrated into machine learning models. The data preprocessing steps were implemented by creating custom functions from scratch in R based on the underlying mathematical formulas, rather than relying on ready-made (black-box) packages.
+Hello! This repository is my main archive containing the projects, university assignments, and study notes I have developed in the fields of **Data Science, Data Mining, and Data Analytics** during my Management Information Systems (MIS) education.
 
-## Theoretical Approach: DIKW Hierarchy
+My core philosophy during development is to learn by coding the underlying statistical mathematics of machine learning and data preprocessing algorithms from scratch, rather than memorizing ready-made (black-box) libraries. I conduct all my work in the **Pardus Linux** open-source development environment.
 
-From a Management Information Systems (MIS) perspective, raw data is misleading unless processed correctly. In this project, the data analytics cycle is structured around the DIKW (Data, Information, Knowledge, Wisdom) pyramid:
+## 📁 Projects and Assignments Catalog
 
-* **Data:** Raw Excel rows containing erroneous `-999` measurements and missing/invalid IDs (`-`).
-* **Information:** The structured dataset obtained by identifying and cleaning erroneous sensor data to preserve statistical reliability.
-* **Knowledge:** Converting variables with completely different units, such as Elevation, Catchment Size, and Latitude (meters, square meters, degrees), into the same scale using statistical algorithms (Min-Max and Z-Score).
-* **Wisdom:** Using this prepared framework to prevent machine learning models (e.g., KNN, Linear Regression) from falsely assuming "larger numbers are more important," thereby laying the groundwork for algorithms to operate with maximum accuracy.
+The works in this repository are listed chronologically below. Each project contains detailed explanations (`README.md`) and source codes within its respective folder:
 
-## Project Steps and Methodology
+*   **[01 - Advanced Data Preprocessing and Normalization in R](./01-veri-on-isleme-r)** 
+    * *Description:* Statistical cleaning of erroneous (`-999`) values on the BALTEX sensor dataset. Implementation of Min-Max and Z-Score scaling (Feature Scaling) processes written from scratch in R, without using the built-in `scale()` function. (Based on the DIKW Hierarchy.)
+*   **[02 - Coming Soon...]**
+    * *Description:* Future assignments and projects will be added here.
 
-### 1. Data Cleaning and Missing Value Management
+## 🛠️ Tools and Technologies Used
+* **Languages:** R, Python, SQL
+* **Development & Database:** RStudio, VS Code, PostgreSQL, DBeaver
+* **Operating System:** Pardus Linux
 
-* `-999` values representing sensor reading errors were identified. This massive gap, accounting for 34% of the total dataset, was statistically removed to preserve the original variance of the data and prevent artificial clustering, rather than being synthetically imputed with algorithms like KNN.
-* Rows with invalid/missing station IDs (`NAT_STA_ID`) entered as (`-`) were filtered out. In total, the 718 rows of raw data were reduced to a clean, analysis-ready table of 332 rows.
-
-### 2. Feature Scaling
-
-Instead of using built-in R functions like `scale()`, the statistical architecture was coded using custom functions:
-
-* **Min-Max Normalization:** A modular function was created to compress variables with different units into a range between 0 and 1, making them comparable.
-```R
-min_max_yap <- function(x) {
-  (x - min(x)) / (max(x) - min(x))
-}
-
-```
-
-
-* **Z-Score (Standardization):** A standardization formula was applied to calculate how many standard deviations a data point is from the group mean, enabling outlier analysis.
-```R
-z_score <- (x - mean(x)) / sd(x)
-
-```
+---
+*This repository is regularly updated as I develop my academic and professional competencies.*
